@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 40%, #fdf2f8 100%);
+      color: #222;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 32px;
+      color: #1e1b4b;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      justify-content: center;
+    }
+
+    .tab-btn {
+      padding: 10px 28px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: 2px solid rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: #444;
+    }
+
+    .tab-btn:hover {
+      background: rgba(255,255,255,0.9);
+      color: #222;
+    }
+
+    .tab-btn.active {
+      background: #312e81;
+      color: white;
+      border-color: #312e81;
+    }
+
+    .section {
+      display: none;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .section h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .list a {
+      display: block;
+      padding: 14px 18px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+    }
+
+    .list a:hover {
+      background: #f0f0f0;
+      border-color: #ddd;
+      transform: translateX(4px);
+    }
+
+    .empty {
+      color: #888;
+      font-size: 0.95rem;
+      padding: 12px 0;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .tab-btn {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Portfolio</h1>
+
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showSection('certificates')">Certificates</button>
+      <button class="tab-btn" onclick="showSection('projects')">Projects</button>
+      <button class="tab-btn" onclick="showSection('resume')">My Resume</button>
+    </div>
+
+    <!-- Certificates Section -->
+    <div id="certificates" class="section active">
+      <h2>Certificates</h2>
+      <ul class="list">
+        <li><a href="https://drive.google.com/file/d/1KlTf67hmf3uvmsjaAfuyMwx7AUBRRGrJ/view?usp=sharing" target="_blank" rel="noopener">AI Fundamentals Foundations</a></li>
+        <li><a href="https://drive.google.com/file/d/1QijKKYgdwI4_Cpwl3puxzrngh_LxnBaj/view?usp=sharing" target="_blank" rel="noopener">AI Fundamentals Language and Vision</a></li>
+        <li><a href="https://drive.google.com/file/d/1HfOoP6lopLetBp2GAYCyhRgIr4kBCblq/view?usp=sharing" target="_blank" rel="noopener">AI Literacy Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1QTfUQGyYrMjOtqxpmn-yX0hMHc3t270z/view?usp=sharing" target="_blank" rel="noopener">AI Customer Service Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/100jKqfIs7kZHz0vrvEHD4-r-Eqri3EIp/view?usp=sharing" target="_blank" rel="noopener">AI Fundamentals Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1K1Dy2rGXTbBSzJvUj7PX-OtTeipXZUXC/view?usp=sharing" target="_blank" rel="noopener">Craft Precise Prompts Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/14I-_JrOuH7c7fw8rrHHnu4bYH9dDyvdt/view?usp=sharing" target="_blank" rel="noopener">Explore Emerging Tech</a></li>
+        <li><a href="https://drive.google.com/file/d/1XAMNrORTUfWv4MeeyT-FxwZOYvfaDX8p/view?usp=sharing" target="_blank" rel="noopener">LLMs Work with Data Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1z3IZZquyz6U3jS-Ew-BTU8c5lF-moD3K/view?usp=sharing" target="_blank" rel="noopener">Getting Started with Generative AI</a></li>
+        <li><a href="https://drive.google.com/file/d/1pPNlAEIGUbGVbQhunxUrYxvATtlACHkD/view?usp=sharing" target="_blank" rel="noopener">Make Agentic AI Work for You</a></li>
+        <li><a href="https://drive.google.com/file/d/15CM98J4LpIj_G-kWK6TIRG84RUIyTaud/view?usp=sharing" target="_blank" rel="noopener">Retrieval Augmented Generation for Enhanced</a></li>
+        <li><a href="https://drive.google.com/file/d/1Uw3tr2dNMtcwFYQwnR4aIE0b9X-lGEkI/view?usp=sharing" target="_blank" rel="noopener">Advanced HTML CSS Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1-ABlrlVxExa8qpVKUNIA7n1ke6aD5iWI/view?usp=sharing" target="_blank" rel="noopener">Intermediate HTML CSS Odin Project</a></li>
+        <li><a href="https://drive.google.com/file/d/1GFW8GgGMYazdawG9GZgAqwcyPXnzNS4_/view?usp=sharing" target="_blank" rel="noopener">JavaScript Concepts Skills</a></li>
+        <li><a href="https://drive.google.com/file/d/1xE7cLlIaXD56Cw5k5xjsyOdbq_S24XiY/view?usp=sharing" target="_blank" rel="noopener">CISSP Certification</a></li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+      <ul class="list">
+        <li><a href="https://drive.google.com/file/d/1LSC41jbn_N3IEh4jqxCxCt0m72VsN633/view?usp=sharing" target="_blank" rel="noopener">Fire Extinguisher Robot</a></li>
+      </ul>
+    </div>
+
+    <!-- Resume Section -->
+    <div id="resume" class="section">
+      <h2>My Resume</h2>
+      <ul class="list">
+        <li><a href="https://drive.google.com/file/d/1XXPhAOVEJF0IdN_iCa10HAnpfVVQNAKa/view?usp=sharing" target="_blank" rel="noopener">View My Resume</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      // Hide all sections
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      // Deactivate all buttons
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+      // Show selected section
+      document.getElementById(id).classList.add('active');
+      // Activate clicked button
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
